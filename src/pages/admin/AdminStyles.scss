@@ -1,0 +1,13 @@
+$background-screen-body:    transparent;
+$height-screen:             100%;
+$width-screen:              100%;
+$prefix:                    'str';
+
+
+.#{prefix}-main-screen-admin {
+    display: flex;
+    flex-direction: column !important;
+    height: $height-screen;
+    width: $width-screen;
+    background-color: $background-screen-body;
+}
