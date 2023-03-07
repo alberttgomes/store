@@ -6,8 +6,8 @@ type IPropsChildren = {
 };
 
 type IPropsAll = {
-    props?: IPropsPublication
-    setProps: (newValue: IPropsPublication) => void;
+    propsPublication?: IPropsPublication
+    setPropsPublication: (newValue: IPropsPublication) => void;
 }
 
 interface IPropsPublication {
@@ -17,15 +17,15 @@ interface IPropsPublication {
     }
 };
 
-const PublicationContext = createContext<IPropsAll>
-                    ({ props: PRODUCT_ITEM_AMAZON, setProps: props => props});
+export const PublicationContext = createContext<IPropsAll>
+                    ({ propsPublication: PRODUCT_ITEM_AMAZON, setPropsPublication: propsPublication => propsPublication});
 
 const ProviderPublication: FC<IPropsChildren> = ({ children }) => {
-    const [props, setProps] = useState<IPropsPublication>(PRODUCT_ITEM_AMAZON);
+    const [propsPublication, setPropsPublication] = useState<IPropsPublication>(PRODUCT_ITEM_AMAZON);
     
     return (
         <PublicationContext.Provider
-            value={{props, setProps}}
+            value={{propsPublication, setPropsPublication}}
         >
             {children}
         </PublicationContext.Provider>
