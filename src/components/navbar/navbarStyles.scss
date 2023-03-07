@@ -1,0 +1,10 @@
+$prefix: "str";
+
+.#{$prefix}-navbar-main {
+    display: fixed;
+    justify-content: center;
+    top: 0  !important;
+    width: 100%;
+    font-size: 14px;
+    z-index: 5;
+}
