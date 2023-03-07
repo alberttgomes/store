@@ -1,3 +1,5 @@
+import logoAmazon from './../assets/amazon-logo-sticker-adesivo.jpg'
+
 export const DEFAULT_NAV_BAR_COMPONENT = {
     items: {
         logo:{
@@ -29,7 +31,7 @@ export const DEFAULT_PRODUCT_ITEM_COMPONENT = {
 
 export const PRODUCT_ITEM_AMAZON = {
     product: {
-        image: "",
-        href: ""
+        image: logoAmazon,
+        href: "https://www.amazon.com/"
     }
-}
+};
