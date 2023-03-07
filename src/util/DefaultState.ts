@@ -26,3 +26,10 @@ export const DEFAULT_PRODUCT_ITEM_COMPONENT = {
         button: onclick
     }
 };
+
+export const PRODUCT_ITEM_AMAZON = {
+    product: {
+        image: "",
+        href: ""
+    }
+}
