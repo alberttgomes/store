@@ -19,8 +19,8 @@ const Navbar: FC <IPropsNavbar> = ({ items }) => {
     const [item, setItem] = useState<string>();
 
     useEffect(() => {
-        items.logo? 
-            setItem(items.logo.photo) : setItem("My Store");
+        items.logo.photo != '' ? 
+                setItem(items.logo.photo) : setItem("My Store");
     }, [items]);
 
     return(
