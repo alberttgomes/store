@@ -1,19 +1,37 @@
+import axios from "axios";
 import React, { FC } from "react";
 
 interface IPropsProductItem {
+    action: {
+        type: string
+    }
     product: {
         photo: string,
         title: string,
         description: string,
         price: number,
         path: string,
-        button: () => void
-    }
-}
+    },
+};
 
 const ProductItem: FC<IPropsProductItem> = ({ product }) => {
+    let messageSuccess: string | Element | null;
+    let messageError: string | Element | null;
 
-    const onSubmitProduct = () => {};
+    const onSubmitProduct = () => {
+        async (url: string, payload: any): Promise<void> => {
+            const response = await axios.post(url, JSON.stringify(payload));
+
+            if (response.data !== null) {
+                messageSuccess = document.querySelector('');
+            }
+            else {
+                messageError = document.querySelector('');
+            }
+        }
+
+        return messageSuccess as string !== '' ? messageSuccess : messageError;
+    };
 
     return(
         <div className="${prefix}-main-product-item">
