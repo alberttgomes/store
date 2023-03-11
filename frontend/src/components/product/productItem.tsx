@@ -14,7 +14,7 @@ interface IPropsProductItem {
     },
 };
 
-const ProductItem: FC<IPropsProductItem> = ({ product }) => {
+const ProductItem: React.FC <IPropsProductItem> = ({ product }) => {
     let messageSuccess: string | Element | null;
     let messageError: string | Element | null;
 
@@ -23,10 +23,10 @@ const ProductItem: FC<IPropsProductItem> = ({ product }) => {
             const response = await axios.post(url, JSON.stringify(payload));
 
             if (response.data !== null) {
-                messageSuccess = document.querySelector('');
+                messageSuccess = document.querySelector('.message-success');
             }
             else {
-                messageError = document.querySelector('');
+                messageError = document.querySelector('.message-error');
             }
         }
 
