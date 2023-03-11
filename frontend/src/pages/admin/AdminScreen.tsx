@@ -1,4 +1,4 @@
-import React, {FC, useState, useContext} from "react";
+import React from "react";
 import axios from "axios";
 import "./AdminStyles.scss";
 import {AdminContext} from "../../context/AdminContext";
@@ -6,13 +6,13 @@ import {PublicationContext} from "./../../context/AddPublication";
 
 interface IPropsAdminScreen {}
 
-const AdminScreen: FC<IPropsAdminScreen> = () => {
+const AdminScreen: React.FC<IPropsAdminScreen> = () => {
 
-    const {props, setProps} = useContext(AdminContext);
-    const {propsPublication, setPropsPublication} = useContext(PublicationContext);
+    const {props, setProps} = React.useContext(AdminContext);
+    const {propsPublication, setPropsPublication} = React.useContext(PublicationContext);
     
     const OnSubmit = () => {
-        const [response, setResponse] = useState<any>();
+        const [response, setResponse] = React.useState<any>();
         
         async(url: string, payload: Object ) => {
 
